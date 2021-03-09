@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  redis:
+    image: redis:6
+    ports:
+      - 6379:6379
+    networks:
+      outer:
+        priority: 100
+
+  postgres:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: testdb
+    ports:
+      - 5432:5432
+    volumes:
+      - /home/szouc/office-node/data:/var/lib/postgresql/data
+    networks:
+      outer:
+        priority: 100
+
+  adminer:
+    image: adminer:4
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      outer:
+        priority: 100
+
+networks:
+  outer:
