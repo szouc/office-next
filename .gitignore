@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -20,11 +19,6 @@
 .DS_Store
 *.pem
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
 # local env files
 .env.local
 .env.development.local
@@ -33,7 +27,7 @@ yarn-error.log*
 
 # vercel
 .vercel
-=======
+
 # Logs
 logs
 *.log
@@ -41,9 +35,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
-
-# Diagnostic reports (https://nodejs.org/api/report.html)
-report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 # Runtime data
 pids
@@ -138,4 +129,3 @@ dist
 
 # TernJS port file
 .tern-port
->>>>>>> 78c29203dba9df50733ce46d10f53982ca872c19

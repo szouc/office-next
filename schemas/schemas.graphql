@@ -1,0 +1,21 @@
+type Query {
+  getAllUsers: [User!]!
+  getUserById(id: ID!): User
+}
+
+type Mutation {
+  signup(email: String!, password: String!, name: String!): User!
+  login(email: String!, password: String!): User!
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  role: Role
+}
+
+enum Role {
+  USER
+  ADMIN
+}
